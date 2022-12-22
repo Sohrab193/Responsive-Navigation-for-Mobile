@@ -1,0 +1,82 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+input[type="checkbox"],
+.hamburger {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+    background-color: bisque;
+    padding: 0 20px;
+
+}
+
+nav .left-side .nav-links {
+    display: flex;
+}
+
+nav .left-side .nav-links a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+    font-size: x-large;
+}
+
+nav .right-side h1 {
+    color: rgb(17, 68, 1);
+    padding: 20px;
+}
+
+@media (max-width:700px) {
+    nav .left-side .nav-links {
+        display: none;
+    }
+
+    nav {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    nav .right-side {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav .right-side .hamburger {
+        display: block;
+        padding: 20px;
+    }
+
+    nav input[type="checkbox"] {
+        display: block;
+        transform: scale(2);
+        position: absolute;
+        margin-left: 33px;
+        margin-top: -43px;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    nav input[type="checkbox"]:checked~.nav-links {
+        display: block;
+    }
+
+    nav .right-side .hamburger span {
+        display: block;
+        height: 3px;
+        width: 25px;
+        margin: 3.5px;
+        background: black;
+    }
+}
